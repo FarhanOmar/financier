@@ -7,8 +7,8 @@ curl -L https://couchdb.apache.org/repo/bintray-pubkey.asc | sudo apt-key add -
 echo "deb https://apache.bintray.com/couchdb-deb bionic main" | sudo tee -a /etc/apt/sources.list
 sudo apt update && sudo apt install -y couchdb
 
-# Install node both version 6.x
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+# Install node both version 10.x
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Git
@@ -27,10 +27,6 @@ node ./install/setup_couchdb.js
 
 # Build
 npm run build
-
-# Install node both version 10.x
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt install -y nodejs
 
 # Daemonize
 sudo npm install -g npm
