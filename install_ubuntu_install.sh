@@ -17,6 +17,9 @@ sudo apt install -y git
 # Get source code
 git clone https://gitlab.com/caleb3141/financier.git
 
+#Get npm
+sudo apt install npm
+
 # Setup couchdb
 cd financier
 npm install
