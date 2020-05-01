@@ -18,18 +18,17 @@ sudo apt install -y npm
 
 # Setup couchdb
 cd financier
-npm install
+sudo npm install -g npm
 node ./install/setup_couchdb.js
 
 # Build
-npm run build
+sudo npm run build
 
 # Install node both version 10.x
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Daemonize
-sudo npm install -g npm
 sudo npm install pm2 -g
 sudo pm2 startup
 sudo pm2 start ./api/index.js
